@@ -21,6 +21,11 @@
 		C317703116366C76006A0F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701216366C76006A0F8B /* Foundation.framework */; };
 		C317703916366C76006A0F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C317703716366C76006A0F8B /* InfoPlist.strings */; };
 		C317703C16366C76006A0F8B /* WunderlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C317703B16366C76006A0F8B /* WunderlistTests.m */; };
+		C317705016367093006A0F8B /* Wunderlist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C317704E16367093006A0F8B /* Wunderlist.xcdatamodeld */; };
+		C317705816367C47006A0F8B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C317705716367C47006A0F8B /* User.m */; };
+		C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C317705A16367D74006A0F8B /* WunderlistCoreData.m */; };
+		C317705D16368765006A0F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317705C16368765006A0F8B /* CoreData.framework */; };
+		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		C317703816366C76006A0F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C317703A16366C76006A0F8B /* WunderlistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WunderlistTests.h; sourceTree = "<group>"; };
 		C317703B16366C76006A0F8B /* WunderlistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WunderlistTests.m; sourceTree = "<group>"; };
+		C317704F16367093006A0F8B /* Wunderlist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wunderlist.xcdatamodel; sourceTree = "<group>"; };
+		C317705616367C47006A0F8B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
+		C317705716367C47006A0F8B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
+		C317705916367D74006A0F8B /* WunderlistCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WunderlistCoreData.h; path = Model/CoreData/WunderlistCoreData.h; sourceTree = "<group>"; };
+		C317705A16367D74006A0F8B /* WunderlistCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WunderlistCoreData.m; path = Model/CoreData/WunderlistCoreData.m; sourceTree = "<group>"; };
+		C317705C16368765006A0F8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C317705F163687EC006A0F8B /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/User/UserManager.h; sourceTree = "<group>"; };
+		C3177060163687EC006A0F8B /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/User/UserManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C317705D16368765006A0F8B /* CoreData.framework in Frameworks */,
 				C317701116366C76006A0F8B /* UIKit.framework in Frameworks */,
 				C317701316366C76006A0F8B /* Foundation.framework in Frameworks */,
 				C317701516366C76006A0F8B /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +115,7 @@
 		C317700F16366C76006A0F8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C317705C16368765006A0F8B /* CoreData.framework */,
 				C317701016366C76006A0F8B /* UIKit.framework */,
 				C317701216366C76006A0F8B /* Foundation.framework */,
 				C317701416366C76006A0F8B /* CoreGraphics.framework */,
@@ -112,6 +127,7 @@
 		C317701616366C76006A0F8B /* Wunderlist */ = {
 			isa = PBXGroup;
 			children = (
+				C317704D16367020006A0F8B /* Model */,
 				C317701F16366C76006A0F8B /* AppDelegate.h */,
 				C317702016366C76006A0F8B /* AppDelegate.m */,
 				C317701716366C76006A0F8B /* Supporting Files */,
@@ -150,6 +166,36 @@
 				C317703716366C76006A0F8B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C317704D16367020006A0F8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C317705E16368799006A0F8B /* User */,
+				C3177051163670B2006A0F8B /* CoreData */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C3177051163670B2006A0F8B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C317704E16367093006A0F8B /* Wunderlist.xcdatamodeld */,
+				C317705616367C47006A0F8B /* User.h */,
+				C317705716367C47006A0F8B /* User.m */,
+				C317705916367D74006A0F8B /* WunderlistCoreData.h */,
+				C317705A16367D74006A0F8B /* WunderlistCoreData.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		C317705E16368799006A0F8B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C317705F163687EC006A0F8B /* UserManager.h */,
+				C3177060163687EC006A0F8B /* UserManager.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +309,10 @@
 			files = (
 				C317701D16366C76006A0F8B /* main.m in Sources */,
 				C317702116366C76006A0F8B /* AppDelegate.m in Sources */,
+				C317705016367093006A0F8B /* Wunderlist.xcdatamodeld in Sources */,
+				C317705816367C47006A0F8B /* User.m in Sources */,
+				C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */,
+				C3177061163687EC006A0F8B /* UserManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +489,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C317704E16367093006A0F8B /* Wunderlist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C317704F16367093006A0F8B /* Wunderlist.xcdatamodel */,
+			);
+			currentVersion = C317704F16367093006A0F8B /* Wunderlist.xcdatamodel */;
+			name = Wunderlist.xcdatamodeld;
+			path = Model/CoreData/Wunderlist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C317700316366C76006A0F8B /* Project object */;
 }
