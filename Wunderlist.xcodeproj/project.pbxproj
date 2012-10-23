@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C317701116366C76006A0F8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701016366C76006A0F8B /* UIKit.framework */; };
+		C317701316366C76006A0F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701216366C76006A0F8B /* Foundation.framework */; };
+		C317701516366C76006A0F8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701416366C76006A0F8B /* CoreGraphics.framework */; };
+		C317701B16366C76006A0F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C317701916366C76006A0F8B /* InfoPlist.strings */; };
+		C317701D16366C76006A0F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C317701C16366C76006A0F8B /* main.m */; };
+		C317702116366C76006A0F8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C317702016366C76006A0F8B /* AppDelegate.m */; };
+		C317702316366C76006A0F8B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C317702216366C76006A0F8B /* Default.png */; };
+		C317702516366C76006A0F8B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C317702416366C76006A0F8B /* Default@2x.png */; };
+		C317702716366C76006A0F8B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C317702616366C76006A0F8B /* Default-568h@2x.png */; };
+		C317702F16366C76006A0F8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317702E16366C76006A0F8B /* SenTestingKit.framework */; };
+		C317703016366C76006A0F8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701016366C76006A0F8B /* UIKit.framework */; };
+		C317703116366C76006A0F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317701216366C76006A0F8B /* Foundation.framework */; };
+		C317703916366C76006A0F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C317703716366C76006A0F8B /* InfoPlist.strings */; };
+		C317703C16366C76006A0F8B /* WunderlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C317703B16366C76006A0F8B /* WunderlistTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C317703216366C76006A0F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C317700316366C76006A0F8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C317700B16366C76006A0F8B;
+			remoteInfo = Wunderlist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C317700C16366C76006A0F8B /* Wunderlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wunderlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C317701016366C76006A0F8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C317701216366C76006A0F8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C317701416366C76006A0F8B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C317701816366C76006A0F8B /* Wunderlist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wunderlist-Info.plist"; sourceTree = "<group>"; };
+		C317701A16366C76006A0F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C317701C16366C76006A0F8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C317701E16366C76006A0F8B /* Wunderlist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wunderlist-Prefix.pch"; sourceTree = "<group>"; };
+		C317701F16366C76006A0F8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C317702016366C76006A0F8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C317702216366C76006A0F8B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C317702416366C76006A0F8B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C317702616366C76006A0F8B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C317702D16366C76006A0F8B /* WunderlistTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderlistTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C317702E16366C76006A0F8B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C317703616366C76006A0F8B /* WunderlistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WunderlistTests-Info.plist"; sourceTree = "<group>"; };
+		C317703816366C76006A0F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C317703A16366C76006A0F8B /* WunderlistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WunderlistTests.h; sourceTree = "<group>"; };
+		C317703B16366C76006A0F8B /* WunderlistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WunderlistTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C317700916366C76006A0F8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317701116366C76006A0F8B /* UIKit.framework in Frameworks */,
+				C317701316366C76006A0F8B /* Foundation.framework in Frameworks */,
+				C317701516366C76006A0F8B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C317702916366C76006A0F8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317702F16366C76006A0F8B /* SenTestingKit.framework in Frameworks */,
+				C317703016366C76006A0F8B /* UIKit.framework in Frameworks */,
+				C317703116366C76006A0F8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C317700116366C76006A0F8B = {
+			isa = PBXGroup;
+			children = (
+				C317701616366C76006A0F8B /* Wunderlist */,
+				C317703416366C76006A0F8B /* WunderlistTests */,
+				C317700F16366C76006A0F8B /* Frameworks */,
+				C317700D16366C76006A0F8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C317700D16366C76006A0F8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C317700C16366C76006A0F8B /* Wunderlist.app */,
+				C317702D16366C76006A0F8B /* WunderlistTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C317700F16366C76006A0F8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C317701016366C76006A0F8B /* UIKit.framework */,
+				C317701216366C76006A0F8B /* Foundation.framework */,
+				C317701416366C76006A0F8B /* CoreGraphics.framework */,
+				C317702E16366C76006A0F8B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C317701616366C76006A0F8B /* Wunderlist */ = {
+			isa = PBXGroup;
+			children = (
+				C317701F16366C76006A0F8B /* AppDelegate.h */,
+				C317702016366C76006A0F8B /* AppDelegate.m */,
+				C317701716366C76006A0F8B /* Supporting Files */,
+			);
+			path = Wunderlist;
+			sourceTree = "<group>";
+		};
+		C317701716366C76006A0F8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C317701816366C76006A0F8B /* Wunderlist-Info.plist */,
+				C317701916366C76006A0F8B /* InfoPlist.strings */,
+				C317701C16366C76006A0F8B /* main.m */,
+				C317701E16366C76006A0F8B /* Wunderlist-Prefix.pch */,
+				C317702216366C76006A0F8B /* Default.png */,
+				C317702416366C76006A0F8B /* Default@2x.png */,
+				C317702616366C76006A0F8B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C317703416366C76006A0F8B /* WunderlistTests */ = {
+			isa = PBXGroup;
+			children = (
+				C317703A16366C76006A0F8B /* WunderlistTests.h */,
+				C317703B16366C76006A0F8B /* WunderlistTests.m */,
+				C317703516366C76006A0F8B /* Supporting Files */,
+			);
+			path = WunderlistTests;
+			sourceTree = "<group>";
+		};
+		C317703516366C76006A0F8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C317703616366C76006A0F8B /* WunderlistTests-Info.plist */,
+				C317703716366C76006A0F8B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C317700B16366C76006A0F8B /* Wunderlist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C317703F16366C76006A0F8B /* Build configuration list for PBXNativeTarget "Wunderlist" */;
+			buildPhases = (
+				C317700816366C76006A0F8B /* Sources */,
+				C317700916366C76006A0F8B /* Frameworks */,
+				C317700A16366C76006A0F8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wunderlist;
+			productName = Wunderlist;
+			productReference = C317700C16366C76006A0F8B /* Wunderlist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C317702C16366C76006A0F8B /* WunderlistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C317704216366C76006A0F8B /* Build configuration list for PBXNativeTarget "WunderlistTests" */;
+			buildPhases = (
+				C317702816366C76006A0F8B /* Sources */,
+				C317702916366C76006A0F8B /* Frameworks */,
+				C317702A16366C76006A0F8B /* Resources */,
+				C317702B16366C76006A0F8B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C317703316366C76006A0F8B /* PBXTargetDependency */,
+			);
+			name = WunderlistTests;
+			productName = WunderlistTests;
+			productReference = C317702D16366C76006A0F8B /* WunderlistTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C317700316366C76006A0F8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Chan Soon Park";
+			};
+			buildConfigurationList = C317700616366C76006A0F8B /* Build configuration list for PBXProject "Wunderlist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C317700116366C76006A0F8B;
+			productRefGroup = C317700D16366C76006A0F8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C317700B16366C76006A0F8B /* Wunderlist */,
+				C317702C16366C76006A0F8B /* WunderlistTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C317700A16366C76006A0F8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317701B16366C76006A0F8B /* InfoPlist.strings in Resources */,
+				C317702316366C76006A0F8B /* Default.png in Resources */,
+				C317702516366C76006A0F8B /* Default@2x.png in Resources */,
+				C317702716366C76006A0F8B /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C317702A16366C76006A0F8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317703916366C76006A0F8B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C317702B16366C76006A0F8B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C317700816366C76006A0F8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317701D16366C76006A0F8B /* main.m in Sources */,
+				C317702116366C76006A0F8B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C317702816366C76006A0F8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C317703C16366C76006A0F8B /* WunderlistTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C317703316366C76006A0F8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C317700B16366C76006A0F8B /* Wunderlist */;
+			targetProxy = C317703216366C76006A0F8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C317701916366C76006A0F8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C317701A16366C76006A0F8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C317703716366C76006A0F8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C317703816366C76006A0F8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C317703D16366C76006A0F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C317703E16366C76006A0F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C317704016366C76006A0F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
+				INFOPLIST_FILE = "Wunderlist/Wunderlist-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C317704116366C76006A0F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
+				INFOPLIST_FILE = "Wunderlist/Wunderlist-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C317704316366C76006A0F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wunderlist.app/Wunderlist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
+				INFOPLIST_FILE = "WunderlistTests/WunderlistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C317704416366C76006A0F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wunderlist.app/Wunderlist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
+				INFOPLIST_FILE = "WunderlistTests/WunderlistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C317700616366C76006A0F8B /* Build configuration list for PBXProject "Wunderlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C317703D16366C76006A0F8B /* Debug */,
+				C317703E16366C76006A0F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C317703F16366C76006A0F8B /* Build configuration list for PBXNativeTarget "Wunderlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C317704016366C76006A0F8B /* Debug */,
+				C317704116366C76006A0F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C317704216366C76006A0F8B /* Build configuration list for PBXNativeTarget "WunderlistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C317704316366C76006A0F8B /* Debug */,
+				C317704416366C76006A0F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C317700316366C76006A0F8B /* Project object */;
+}
