@@ -96,9 +96,15 @@
     return objects;
 }
 
-- (BOOL)save:(NSError**)error
+- (BOOL)save
 {
-    return [_managedObjectContext save:error];
+    NSError *error = nil;
+    BOOL result = [_managedObjectContext save:&error];
+    
+    if (!result)
+        NSLog(@"save error %@, %@", error, [error userInfo]);
+    
+    return result;
 }
 
 @end

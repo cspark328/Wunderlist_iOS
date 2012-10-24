@@ -62,7 +62,14 @@
 //    [userManager insertUser];
     
     NSArray* users = [userManager getUsers];
+    
     NSLog(@"user count : %d", [users count]);
+    
+    if ([users count]) {
+        for (User* user in users) {
+            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater);
+        }
+    }
     
     return YES;
 }

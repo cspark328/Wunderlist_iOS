@@ -20,17 +20,19 @@
     [super dealloc];
 }
 
-- (void)insertUser
+- (void)insertUserForId:(NSString *)userId withPassword:(NSString *)password
 {
-    User* user = (User *)[self insertNewObjectForEntityForName:entityName];
-    [user setUserId:@"cspark328"];
-    [user setPassword:@"nollpc328"];
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    User* user = [(User *)[self insertNewObjectForEntityForName:entityName] autorelease];
+    [user setUserId:userId];
+    [user setPassword:password];
     [user setIsLater:NO];
     
     [self insertObject:user];
+    [self save];
     
-    NSError *error;
-    [self save:&error];
+    [pool drain];
 }
 
 - (NSArray *)getUsers

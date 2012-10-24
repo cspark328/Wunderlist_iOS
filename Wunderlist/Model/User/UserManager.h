@@ -15,7 +15,7 @@
 @property(nonatomic, retain) NSArray* users;
 @property(nonatomic, retain) User* user;
 
-- (void)insertUser;
+- (void)insertUserForId:(NSString *)userId withPassword:(NSString *)password;
 - (NSArray *)getUsers;
 
 @end
