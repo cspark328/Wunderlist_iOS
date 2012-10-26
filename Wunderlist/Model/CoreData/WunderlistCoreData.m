@@ -55,7 +55,7 @@
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
                              [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     
-    NSError* error;
+    NSError* error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[NSManagedObjectModel mergedModelFromBundles:nil]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -75,6 +75,11 @@
 - (void)insertObject:(NSManagedObject *)object
 {
     [_managedObjectContext insertObject:object];
+}
+
+- (void)deleteObject:(NSManagedObject *)object
+{
+    [_managedObjectContext deleteObject:object];
 }
 
 - (NSArray *)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate error:(NSError **)error
@@ -98,7 +103,7 @@
 
 - (BOOL)save
 {
-    NSError *error = nil;
+    NSError* error = nil;
     BOOL result = [_managedObjectContext save:&error];
     
     if (!result)

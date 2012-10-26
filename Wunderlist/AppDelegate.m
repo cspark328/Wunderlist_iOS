@@ -22,7 +22,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    [self isLogin];
+    BOOL result = [self isLogin];
+    NSLog(@"is login : %@", result ? @"YES" : @"NO");
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -58,18 +59,27 @@
 
 - (Boolean)isLogin
 {
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
     UserManager* userManager = [UserManager new];
-//    [userManager insertUser];
+    [userManager deleteUsers];
+    [userManager insertUserForId:@"cspark328" withPassword:@"1q2w3e"];
+    
     
     NSArray* users = [userManager getUsers];
     
     NSLog(@"user count : %d", [users count]);
     
     if ([users count]) {
+        NSLog(@"user exist");
         for (User* user in users) {
             NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater);
         }
     }
+    
+    [userManager release];
+    
+    [pool drain];
     
     return YES;
 }

@@ -407,6 +407,7 @@
 		C317704016366C76006A0F8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
 				INFOPLIST_FILE = "Wunderlist/Wunderlist-Info.plist";
@@ -418,6 +419,7 @@
 		C317704116366C76006A0F8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wunderlist/Wunderlist-Prefix.pch";
 				INFOPLIST_FILE = "Wunderlist/Wunderlist-Info.plist";
@@ -479,6 +481,7 @@
 				C317704116366C76006A0F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C317704216366C76006A0F8B /* Build configuration list for PBXNativeTarget "WunderlistTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +490,7 @@
 				C317704416366C76006A0F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

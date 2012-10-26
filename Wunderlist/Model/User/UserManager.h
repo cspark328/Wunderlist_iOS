@@ -12,10 +12,11 @@
 
 @interface UserManager : WunderlistCoreData
 
-@property(nonatomic, retain) NSArray* users;
-@property(nonatomic, retain) User* user;
+@property(nonatomic, readonly) NSMutableArray* users;
+@property(nonatomic, readonly) User* user;
 
 - (void)insertUserForId:(NSString *)userId withPassword:(NSString *)password;
+- (void)deleteUsers;
 - (NSArray *)getUsers;
 
 @end

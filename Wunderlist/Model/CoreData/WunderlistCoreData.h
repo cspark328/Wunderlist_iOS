@@ -16,6 +16,7 @@
 
 - (id)insertNewObjectForEntityForName:(NSString *)entityName;
 - (void)insertObject:(NSManagedObject *)object;
+- (void)deleteObject:(NSManagedObject *)object;
 - (NSArray *)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate error:(NSError **)error;
 - (BOOL)save;
 
