@@ -26,6 +26,7 @@
 		C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C317705A16367D74006A0F8B /* WunderlistCoreData.m */; };
 		C317705D16368765006A0F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317705C16368765006A0F8B /* CoreData.framework */; };
 		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
+		C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C31659163EC5B4005F4572 /* ToDoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		C317705C16368765006A0F8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C317705F163687EC006A0F8B /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/User/UserManager.h; sourceTree = "<group>"; };
 		C3177060163687EC006A0F8B /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/User/UserManager.m; sourceTree = "<group>"; };
+		C3C31658163EC5B4005F4572 /* ToDoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoManager.h; path = Model/ToDo/ToDoManager.h; sourceTree = "<group>"; };
+		C3C31659163EC5B4005F4572 /* ToDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoManager.m; path = Model/ToDo/ToDoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 		C317704D16367020006A0F8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3C31653163EC55F005F4572 /* ToDo */,
 				C317705E16368799006A0F8B /* User */,
 				C3177051163670B2006A0F8B /* CoreData */,
 			);
@@ -196,6 +200,15 @@
 				C3177060163687EC006A0F8B /* UserManager.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		C3C31653163EC55F005F4572 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				C3C31658163EC5B4005F4572 /* ToDoManager.h */,
+				C3C31659163EC5B4005F4572 /* ToDoManager.m */,
+			);
+			name = ToDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +326,7 @@
 				C317705816367C47006A0F8B /* User.m in Sources */,
 				C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */,
 				C3177061163687EC006A0F8B /* UserManager.m in Sources */,
+				C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ToDoManager.h"
 #import "UserManager.h"
 #import "User.h"
 
@@ -22,58 +23,76 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    BOOL result = [self isLogin];
-    NSLog(@"is login : %@", result ? @"YES" : @"NO");
+    // 앱 최초 실행 시 기본 TODO를 셋팅한다.
+    BOOL isFirstRun = [self isFirstRun];
+    NSLog(@"is first run : %@", isFirstRun ? @"YES" : @"NO");
+    if (isFirstRun) {
+        [self recordFirstRun];
+        [self initToDo];
+    }
+    
+    // 사용자 정보가 없을 경우 로그인 창을 띄운다.
+    // 사용자 정보가 있을 경우 core data 내용이 있으면 업로드 및 todo목록을 띄운다.
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
+- (BOOL)isFirstRun
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    BOOL isFirstRun = YES;
+    
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"is first run : %@", [userDefaults stringForKey:@"firstRun"]);
+    
+    if ([userDefaults objectForKey:@"firstRun"])
+        isFirstRun = NO;
+    
+    [pool drain];
+    
+    return isFirstRun;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+- (void)recordFirstRun
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![userDefaults objectForKey:@"firstRun"])
+        [userDefaults setObject:[NSDate date] forKey:@"firstRun"];
+    
+    [userDefaults synchronize];
+    
+    [pool drain];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+- (void)initToDo
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    ToDoManager* todoManager = [ToDoManager new];
+    [todoManager initToDo];
+    
+    [pool drain];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (Boolean)isLogin
+- (Boolean)hasUser
 {
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
     
     UserManager* userManager = [UserManager new];
-    [userManager deleteUsers];
-    [userManager insertUserForId:@"cspark328" withPassword:@"1q2w3e"];
-    
+//    [userManager deleteUsers];
+//    [userManager insertUserForId:@"cspark328" withPassword:@"1q2w3e"];
     
     NSArray* users = [userManager getUsers];
     
-    NSLog(@"user count : %d", [users count]);
-    
     if ([users count]) {
-        NSLog(@"user exist");
         for (User* user in users) {
-            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater);
+            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater ? @"YES" : @"NO");
         }
     }
     
