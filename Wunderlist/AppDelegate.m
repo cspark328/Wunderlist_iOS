@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ToDoManager.h"
 #import "UserManager.h"
+#import "ToDo.h"
 #import "User.h"
 
 @implementation AppDelegate
@@ -23,16 +24,22 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    // 앱 최초 실행 시 기본 TODO를 셋팅한다.
-    BOOL isFirstRun = [self isFirstRun];
-    NSLog(@"is first run : %@", isFirstRun ? @"YES" : @"NO");
-    if (isFirstRun) {
+    if ([self isFirstRun]) {
         [self recordFirstRun];
         [self initToDo];
+        NSLog(@"최초 실행이므로 로그인 창을 띄운다.");
+    } else {
+        if ([self hasUser]) {
+            NSArray* tabs = [self getTabs];
+            if (tabs) {
+                NSLog(@"저장된 탭정보로 todo목록을 띄운다.");
+            } else {
+                NSLog(@"기본 탭정보로 todo목록을 띄운다.");
+            }
+        } else {
+            NSLog(@"사용자 정보가 없으므로 로그인 창을 띄운다.");
+        }
     }
-    
-    // 사용자 정보가 없을 경우 로그인 창을 띄운다.
-    // 사용자 정보가 있을 경우 core data 내용이 있으면 업로드 및 todo목록을 띄운다.
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -46,7 +53,6 @@
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
     
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"is first run : %@", [userDefaults stringForKey:@"firstRun"]);
     
     if ([userDefaults objectForKey:@"firstRun"])
         isFirstRun = NO;
@@ -75,32 +81,57 @@
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
     
     ToDoManager* todoManager = [ToDoManager new];
+    
+    [todoManager deleteToDos];
     [todoManager initToDo];
     
     [pool drain];
 }
 
-- (Boolean)hasUser
+- (BOOL)hasUser
 {
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
     
     UserManager* userManager = [UserManager new];
-//    [userManager deleteUsers];
-//    [userManager insertUserForId:@"cspark328" withPassword:@"1q2w3e"];
     
     NSArray* users = [userManager getUsers];
+    int count = [users count];
     
-    if ([users count]) {
-        for (User* user in users) {
-            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater ? @"YES" : @"NO");
-        }
-    }
+//    if ([users count]) {
+//        for (User* user in users) {
+//            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater ? @"YES" : @"NO");
+//        }
+//    }
     
     [userManager release];
     
     [pool drain];
     
-    return YES;
+    return count;
+}
+
+- (void)getToDos
+{
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    ToDoManager* todoManager = [ToDoManager new];
+    
+    NSArray* todos = [todoManager getToDos];
+    
+    if ([todos count]) {
+        for (ToDo* todo in todos) {
+            NSLog(@"isStarred : %@, name : %@", todo.isStarred == [NSNumber numberWithInt:1] ? @"YES" : @"NO", todo.name);
+        }
+    }
+    
+    [todoManager release];
+    
+    [pool drain];
+}
+
+- (NSArray *)getTabs
+{
+    return nil;
 }
 
 @end

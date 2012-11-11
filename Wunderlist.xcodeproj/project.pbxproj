@@ -22,10 +22,11 @@
 		C317703916366C76006A0F8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C317703716366C76006A0F8B /* InfoPlist.strings */; };
 		C317703C16366C76006A0F8B /* WunderlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C317703B16366C76006A0F8B /* WunderlistTests.m */; };
 		C317705016367093006A0F8B /* Wunderlist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C317704E16367093006A0F8B /* Wunderlist.xcdatamodeld */; };
-		C317705816367C47006A0F8B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C317705716367C47006A0F8B /* User.m */; };
 		C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C317705A16367D74006A0F8B /* WunderlistCoreData.m */; };
 		C317705D16368765006A0F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317705C16368765006A0F8B /* CoreData.framework */; };
 		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
+		C33261AD164FF3C100A718C3 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261AC164FF3C100A718C3 /* ToDo.m */; };
+		C33261B1164FF44C00A718C3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261B0164FF44C00A718C3 /* User.m */; };
 		C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C31659163EC5B4005F4572 /* ToDoManager.m */; };
 /* End PBXBuildFile section */
 
@@ -60,13 +61,15 @@
 		C317703A16366C76006A0F8B /* WunderlistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WunderlistTests.h; sourceTree = "<group>"; };
 		C317703B16366C76006A0F8B /* WunderlistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WunderlistTests.m; sourceTree = "<group>"; };
 		C317704F16367093006A0F8B /* Wunderlist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wunderlist.xcdatamodel; sourceTree = "<group>"; };
-		C317705616367C47006A0F8B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/CoreData/User.h; sourceTree = "<group>"; };
-		C317705716367C47006A0F8B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/CoreData/User.m; sourceTree = "<group>"; };
 		C317705916367D74006A0F8B /* WunderlistCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WunderlistCoreData.h; path = Model/CoreData/WunderlistCoreData.h; sourceTree = "<group>"; };
 		C317705A16367D74006A0F8B /* WunderlistCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WunderlistCoreData.m; path = Model/CoreData/WunderlistCoreData.m; sourceTree = "<group>"; };
 		C317705C16368765006A0F8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C317705F163687EC006A0F8B /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/User/UserManager.h; sourceTree = "<group>"; };
 		C3177060163687EC006A0F8B /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/User/UserManager.m; sourceTree = "<group>"; };
+		C33261AB164FF3C100A718C3 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = Model/ToDo/ToDo.h; sourceTree = "<group>"; };
+		C33261AC164FF3C100A718C3 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = Model/ToDo/ToDo.m; sourceTree = "<group>"; };
+		C33261AF164FF44C00A718C3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User/User.h; sourceTree = "<group>"; };
+		C33261B0164FF44C00A718C3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User/User.m; sourceTree = "<group>"; };
 		C3C31658163EC5B4005F4572 /* ToDoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoManager.h; path = Model/ToDo/ToDoManager.h; sourceTree = "<group>"; };
 		C3C31659163EC5B4005F4572 /* ToDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoManager.m; path = Model/ToDo/ToDoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,8 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				C317704E16367093006A0F8B /* Wunderlist.xcdatamodeld */,
-				C317705616367C47006A0F8B /* User.h */,
-				C317705716367C47006A0F8B /* User.m */,
 				C317705916367D74006A0F8B /* WunderlistCoreData.h */,
 				C317705A16367D74006A0F8B /* WunderlistCoreData.m */,
 			);
@@ -196,6 +197,8 @@
 		C317705E16368799006A0F8B /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C33261AF164FF44C00A718C3 /* User.h */,
+				C33261B0164FF44C00A718C3 /* User.m */,
 				C317705F163687EC006A0F8B /* UserManager.h */,
 				C3177060163687EC006A0F8B /* UserManager.m */,
 			);
@@ -205,6 +208,8 @@
 		C3C31653163EC55F005F4572 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				C33261AB164FF3C100A718C3 /* ToDo.h */,
+				C33261AC164FF3C100A718C3 /* ToDo.m */,
 				C3C31658163EC5B4005F4572 /* ToDoManager.h */,
 				C3C31659163EC5B4005F4572 /* ToDoManager.m */,
 			);
@@ -323,10 +328,11 @@
 				C317701D16366C76006A0F8B /* main.m in Sources */,
 				C317702116366C76006A0F8B /* AppDelegate.m in Sources */,
 				C317705016367093006A0F8B /* Wunderlist.xcdatamodeld in Sources */,
-				C317705816367C47006A0F8B /* User.m in Sources */,
 				C317705B16367D74006A0F8B /* WunderlistCoreData.m in Sources */,
 				C3177061163687EC006A0F8B /* UserManager.m in Sources */,
 				C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */,
+				C33261AD164FF3C100A718C3 /* ToDo.m in Sources */,
+				C33261B1164FF44C00A718C3 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,17 @@
 
 #import "WunderlistCoreData.h"
 
+@class ToDo;
+
 @interface ToDoManager : WunderlistCoreData
 
+@property(nonatomic, readonly) NSMutableArray* todos;
+@property(nonatomic, readonly) ToDo* todo;
+
 - (void)initToDo;
+- (void)insertToDo:(ToDo *)todo;
+- (void)deleteToDos;
+- (NSArray *)getToDos;
+
 
 @end
