@@ -11,6 +11,7 @@
 #import "UserManager.h"
 #import "ToDo.h"
 #import "User.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -27,10 +28,16 @@
     if ([self isFirstRun]) {
         [self recordFirstRun];
         [self initToDo];
+        
         NSLog(@"최초 실행이므로 로그인 창을 띄운다.");
+        
+        LoginViewController* viewController = [LoginViewController new];
+        [self.window setRootViewController:viewController];
+        [viewController release];
     } else {
         if ([self hasUser]) {
-            NSArray* tabs = [self getTabs];
+            NSArray* tabs = [self getTabOrder];
+            NSLog(@"tabs : %@", tabs);
             if (tabs) {
                 NSLog(@"저장된 탭정보로 todo목록을 띄운다.");
             } else {
@@ -97,11 +104,8 @@
     NSArray* users = [userManager getUsers];
     int count = [users count];
     
-//    if ([users count]) {
-//        for (User* user in users) {
-//            NSLog(@"id : %@, password : %@, isLater : %@", user.userId, user.password, user.isLater ? @"YES" : @"NO");
-//        }
-//    }
+    [userManager deleteUsers];
+//    [userManager insertUserForId:@"cspark328" withPassword:@"123qwe"];
     
     [userManager release];
     
@@ -129,9 +133,27 @@
     [pool drain];
 }
 
-- (NSArray *)getTabs
+- (NSArray *)getTabOrder
 {
-    return nil;
+    NSArray* tabOrder = nil;
+    
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    UserManager* userManager = [UserManager new];
+    
+    NSArray* users = [userManager getUsers];
+    
+    if ([users count]) {
+        for (User* user in users) {
+            tabOrder = user.tabOrder;
+        }
+    }
+    
+    [userManager release];
+    
+    [pool drain];
+    
+    return tabOrder;
 }
 
 @end

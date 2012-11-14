@@ -2,7 +2,7 @@
 //  User.m
 //  Wunderlist
 //
-//  Created by Chan Soon Park on 12. 11. 11..
+//  Created by Chan Soon Park on 12. 11. 14..
 //  Copyright (c) 2012년 Chan Soon Park. All rights reserved.
 //
 
@@ -14,5 +14,6 @@
 @dynamic isLater;
 @dynamic password;
 @dynamic userId;
+@dynamic tabOrder;
 
 @end

@@ -26,8 +26,13 @@
 		C317705D16368765006A0F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317705C16368765006A0F8B /* CoreData.framework */; };
 		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
 		C33261AD164FF3C100A718C3 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261AC164FF3C100A718C3 /* ToDo.m */; };
-		C33261B1164FF44C00A718C3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261B0164FF44C00A718C3 /* User.m */; };
 		C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C31659163EC5B4005F4572 /* ToDoManager.m */; };
+		C3CF3FF71653DF3700D998B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF3FF61653DF3700D998B8 /* User.m */; };
+		C3CF400D1653E48000D998B8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF400C1653E48000D998B8 /* BaseTableViewController.m */; };
+		C3CF40101653E4AB00D998B8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF400F1653E4AB00D998B8 /* BaseNavigationController.m */; };
+		C3CF40131653E4C600D998B8 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF40121653E4C600D998B8 /* SpinnerView.m */; };
+		C3CF40161653E4E400D998B8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF40151653E4E400D998B8 /* LoginViewController.m */; };
+		C3CF401A1653E5CC00D998B8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF40191653E5CC00D998B8 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +73,20 @@
 		C3177060163687EC006A0F8B /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/User/UserManager.m; sourceTree = "<group>"; };
 		C33261AB164FF3C100A718C3 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = Model/ToDo/ToDo.h; sourceTree = "<group>"; };
 		C33261AC164FF3C100A718C3 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = Model/ToDo/ToDo.m; sourceTree = "<group>"; };
-		C33261AF164FF44C00A718C3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User/User.h; sourceTree = "<group>"; };
-		C33261B0164FF44C00A718C3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User/User.m; sourceTree = "<group>"; };
 		C3C31658163EC5B4005F4572 /* ToDoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoManager.h; path = Model/ToDo/ToDoManager.h; sourceTree = "<group>"; };
 		C3C31659163EC5B4005F4572 /* ToDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoManager.m; path = Model/ToDo/ToDoManager.m; sourceTree = "<group>"; };
+		C3CF3FF51653DF3700D998B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User/User.h; sourceTree = "<group>"; };
+		C3CF3FF61653DF3700D998B8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User/User.m; sourceTree = "<group>"; };
+		C3CF400B1653E48000D998B8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Common/BaseTableViewController.h; sourceTree = "<group>"; };
+		C3CF400C1653E48000D998B8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Common/BaseTableViewController.m; sourceTree = "<group>"; };
+		C3CF400E1653E4AB00D998B8 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = Common/BaseNavigationController.h; sourceTree = "<group>"; };
+		C3CF400F1653E4AB00D998B8 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = Common/BaseNavigationController.m; sourceTree = "<group>"; };
+		C3CF40111653E4C600D998B8 /* SpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinnerView.h; path = Common/SpinnerView.h; sourceTree = "<group>"; };
+		C3CF40121653E4C600D998B8 /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinnerView.m; path = Common/SpinnerView.m; sourceTree = "<group>"; };
+		C3CF40141653E4E400D998B8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
+		C3CF40151653E4E400D998B8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		C3CF40181653E5CC00D998B8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = TabBar/TabBarViewController.h; sourceTree = "<group>"; };
+		C3CF40191653E5CC00D998B8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = TabBar/TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +148,9 @@
 		C317701616366C76006A0F8B /* Wunderlist */ = {
 			isa = PBXGroup;
 			children = (
+				C3CF40171653E5A300D998B8 /* TabBar */,
+				C3CF3FFD1653E2E800D998B8 /* Common */,
+				C3CF3FFC1653E2CA00D998B8 /* Login */,
 				C317704D16367020006A0F8B /* Model */,
 				C317701F16366C76006A0F8B /* AppDelegate.h */,
 				C317702016366C76006A0F8B /* AppDelegate.m */,
@@ -197,8 +215,8 @@
 		C317705E16368799006A0F8B /* User */ = {
 			isa = PBXGroup;
 			children = (
-				C33261AF164FF44C00A718C3 /* User.h */,
-				C33261B0164FF44C00A718C3 /* User.m */,
+				C3CF3FF51653DF3700D998B8 /* User.h */,
+				C3CF3FF61653DF3700D998B8 /* User.m */,
 				C317705F163687EC006A0F8B /* UserManager.h */,
 				C3177060163687EC006A0F8B /* UserManager.m */,
 			);
@@ -214,6 +232,37 @@
 				C3C31659163EC5B4005F4572 /* ToDoManager.m */,
 			);
 			name = ToDo;
+			sourceTree = "<group>";
+		};
+		C3CF3FFC1653E2CA00D998B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF40141653E4E400D998B8 /* LoginViewController.h */,
+				C3CF40151653E4E400D998B8 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C3CF3FFD1653E2E800D998B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF400B1653E48000D998B8 /* BaseTableViewController.h */,
+				C3CF400C1653E48000D998B8 /* BaseTableViewController.m */,
+				C3CF400E1653E4AB00D998B8 /* BaseNavigationController.h */,
+				C3CF400F1653E4AB00D998B8 /* BaseNavigationController.m */,
+				C3CF40111653E4C600D998B8 /* SpinnerView.h */,
+				C3CF40121653E4C600D998B8 /* SpinnerView.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C3CF40171653E5A300D998B8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF40181653E5CC00D998B8 /* TabBarViewController.h */,
+				C3CF40191653E5CC00D998B8 /* TabBarViewController.m */,
+			);
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +381,12 @@
 				C3177061163687EC006A0F8B /* UserManager.m in Sources */,
 				C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */,
 				C33261AD164FF3C100A718C3 /* ToDo.m in Sources */,
-				C33261B1164FF44C00A718C3 /* User.m in Sources */,
+				C3CF3FF71653DF3700D998B8 /* User.m in Sources */,
+				C3CF400D1653E48000D998B8 /* BaseTableViewController.m in Sources */,
+				C3CF40101653E4AB00D998B8 /* BaseNavigationController.m in Sources */,
+				C3CF40131653E4C600D998B8 /* SpinnerView.m in Sources */,
+				C3CF40161653E4E400D998B8 /* LoginViewController.m in Sources */,
+				C3CF401A1653E5CC00D998B8 /* TabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
