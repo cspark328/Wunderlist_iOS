@@ -10,4 +10,6 @@
 
 @interface TabBarViewController : UITabBarController
 
+- (id)initWithTabOrder:(NSArray *)tabOrder;
+
 @end

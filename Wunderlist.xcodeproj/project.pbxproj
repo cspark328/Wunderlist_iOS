@@ -26,6 +26,15 @@
 		C317705D16368765006A0F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C317705C16368765006A0F8B /* CoreData.framework */; };
 		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
 		C33261AD164FF3C100A718C3 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261AC164FF3C100A718C3 /* ToDo.m */; };
+		C3A55FD5165D3EFC00C58905 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FBE165D3EFC00C58905 /* DetailTableViewCell.m */; };
+		C3A55FD6165D3EFC00C58905 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC0165D3EFC00C58905 /* DetailTableViewController.m */; };
+		C3A55FD7165D3EFC00C58905 /* DueDateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC3165D3EFC00C58905 /* DueDateTableViewController.m */; };
+		C3A55FD8165D3EFC00C58905 /* EditTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC6165D3EFC00C58905 /* EditTextTableViewController.m */; };
+		C3A55FD9165D3EFC00C58905 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC9165D3EFC00C58905 /* ListTableViewCell.m */; };
+		C3A55FDA165D3EFC00C58905 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FCB165D3EFC00C58905 /* ListTableViewController.m */; };
+		C3A55FDB165D3EFC00C58905 /* ListsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FCE165D3EFC00C58905 /* ListsTableViewCell.m */; };
+		C3A55FDC165D3EFC00C58905 /* ListsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FD0165D3EFC00C58905 /* ListsTableViewController.m */; };
+		C3A55FDD165D3EFC00C58905 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FD3165D3EFC00C58905 /* SettingsTableViewController.m */; };
 		C3C3165A163EC5B4005F4572 /* ToDoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C31659163EC5B4005F4572 /* ToDoManager.m */; };
 		C3CF3FF71653DF3700D998B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF3FF61653DF3700D998B8 /* User.m */; };
 		C3CF400D1653E48000D998B8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF400C1653E48000D998B8 /* BaseTableViewController.m */; };
@@ -73,6 +82,24 @@
 		C3177060163687EC006A0F8B /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/User/UserManager.m; sourceTree = "<group>"; };
 		C33261AB164FF3C100A718C3 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = Model/ToDo/ToDo.h; sourceTree = "<group>"; };
 		C33261AC164FF3C100A718C3 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = Model/ToDo/ToDo.m; sourceTree = "<group>"; };
+		C3A55FBD165D3EFC00C58905 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		C3A55FBE165D3EFC00C58905 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		C3A55FBF165D3EFC00C58905 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		C3A55FC0165D3EFC00C58905 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		C3A55FC2165D3EFC00C58905 /* DueDateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DueDateTableViewController.h; sourceTree = "<group>"; };
+		C3A55FC3165D3EFC00C58905 /* DueDateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DueDateTableViewController.m; sourceTree = "<group>"; };
+		C3A55FC5165D3EFC00C58905 /* EditTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextTableViewController.h; sourceTree = "<group>"; };
+		C3A55FC6165D3EFC00C58905 /* EditTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTextTableViewController.m; sourceTree = "<group>"; };
+		C3A55FC8165D3EFC00C58905 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		C3A55FC9165D3EFC00C58905 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		C3A55FCA165D3EFC00C58905 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		C3A55FCB165D3EFC00C58905 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		C3A55FCD165D3EFC00C58905 /* ListsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewCell.h; sourceTree = "<group>"; };
+		C3A55FCE165D3EFC00C58905 /* ListsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewCell.m; sourceTree = "<group>"; };
+		C3A55FCF165D3EFC00C58905 /* ListsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewController.h; sourceTree = "<group>"; };
+		C3A55FD0165D3EFC00C58905 /* ListsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewController.m; sourceTree = "<group>"; };
+		C3A55FD2165D3EFC00C58905 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		C3A55FD3165D3EFC00C58905 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		C3C31658163EC5B4005F4572 /* ToDoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoManager.h; path = Model/ToDo/ToDoManager.h; sourceTree = "<group>"; };
 		C3C31659163EC5B4005F4572 /* ToDoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoManager.m; path = Model/ToDo/ToDoManager.m; sourceTree = "<group>"; };
 		C3CF3FF51653DF3700D998B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User/User.h; sourceTree = "<group>"; };
@@ -148,6 +175,13 @@
 		C317701616366C76006A0F8B /* Wunderlist */ = {
 			isa = PBXGroup;
 			children = (
+				C3A55FBC165D3EFC00C58905 /* Detail */,
+				C3A55FC1165D3EFC00C58905 /* DueDate */,
+				C3A55FC4165D3EFC00C58905 /* EditText */,
+				C3A55FC7165D3EFC00C58905 /* List */,
+				C3A55FCC165D3EFC00C58905 /* Lists */,
+				C3A55FD1165D3EFC00C58905 /* Settings */,
+				C3A55FD4165D3EFC00C58905 /* Write */,
 				C3CF40171653E5A300D998B8 /* TabBar */,
 				C3CF3FFD1653E2E800D998B8 /* Common */,
 				C3CF3FFC1653E2CA00D998B8 /* Login */,
@@ -221,6 +255,73 @@
 				C3177060163687EC006A0F8B /* UserManager.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		C3A55FBC165D3EFC00C58905 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FBD165D3EFC00C58905 /* DetailTableViewCell.h */,
+				C3A55FBE165D3EFC00C58905 /* DetailTableViewCell.m */,
+				C3A55FBF165D3EFC00C58905 /* DetailTableViewController.h */,
+				C3A55FC0165D3EFC00C58905 /* DetailTableViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C3A55FC1165D3EFC00C58905 /* DueDate */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FC2165D3EFC00C58905 /* DueDateTableViewController.h */,
+				C3A55FC3165D3EFC00C58905 /* DueDateTableViewController.m */,
+			);
+			path = DueDate;
+			sourceTree = "<group>";
+		};
+		C3A55FC4165D3EFC00C58905 /* EditText */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FC5165D3EFC00C58905 /* EditTextTableViewController.h */,
+				C3A55FC6165D3EFC00C58905 /* EditTextTableViewController.m */,
+			);
+			path = EditText;
+			sourceTree = "<group>";
+		};
+		C3A55FC7165D3EFC00C58905 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FC8165D3EFC00C58905 /* ListTableViewCell.h */,
+				C3A55FC9165D3EFC00C58905 /* ListTableViewCell.m */,
+				C3A55FCA165D3EFC00C58905 /* ListTableViewController.h */,
+				C3A55FCB165D3EFC00C58905 /* ListTableViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C3A55FCC165D3EFC00C58905 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FCD165D3EFC00C58905 /* ListsTableViewCell.h */,
+				C3A55FCE165D3EFC00C58905 /* ListsTableViewCell.m */,
+				C3A55FCF165D3EFC00C58905 /* ListsTableViewController.h */,
+				C3A55FD0165D3EFC00C58905 /* ListsTableViewController.m */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		C3A55FD1165D3EFC00C58905 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55FD2165D3EFC00C58905 /* SettingsTableViewController.h */,
+				C3A55FD3165D3EFC00C58905 /* SettingsTableViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C3A55FD4165D3EFC00C58905 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		C3C31653163EC55F005F4572 /* ToDo */ = {
@@ -387,6 +488,15 @@
 				C3CF40131653E4C600D998B8 /* SpinnerView.m in Sources */,
 				C3CF40161653E4E400D998B8 /* LoginViewController.m in Sources */,
 				C3CF401A1653E5CC00D998B8 /* TabBarViewController.m in Sources */,
+				C3A55FD5165D3EFC00C58905 /* DetailTableViewCell.m in Sources */,
+				C3A55FD6165D3EFC00C58905 /* DetailTableViewController.m in Sources */,
+				C3A55FD7165D3EFC00C58905 /* DueDateTableViewController.m in Sources */,
+				C3A55FD8165D3EFC00C58905 /* EditTextTableViewController.m in Sources */,
+				C3A55FD9165D3EFC00C58905 /* ListTableViewCell.m in Sources */,
+				C3A55FDA165D3EFC00C58905 /* ListTableViewController.m in Sources */,
+				C3A55FDB165D3EFC00C58905 /* ListsTableViewCell.m in Sources */,
+				C3A55FDC165D3EFC00C58905 /* ListsTableViewController.m in Sources */,
+				C3A55FDD165D3EFC00C58905 /* SettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

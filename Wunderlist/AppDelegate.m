@@ -12,6 +12,7 @@
 #import "ToDo.h"
 #import "User.h"
 #import "LoginViewController.h"
+#import "TabBarViewController.h"
 
 @implementation AppDelegate
 
@@ -25,30 +26,30 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
+    UIViewController* viewController = nil;
+    
     if ([self isFirstRun]) {
         [self recordFirstRun];
         [self initToDo];
         
         NSLog(@"최초 실행이므로 로그인 창을 띄운다.");
-        
-        LoginViewController* viewController = [LoginViewController new];
-        [self.window setRootViewController:viewController];
-        [viewController release];
+        viewController = [LoginViewController new];
     } else {
-        if ([self hasUser]) {
-            NSArray* tabs = [self getTabOrder];
-            NSLog(@"tabs : %@", tabs);
-            if (tabs) {
-                NSLog(@"저장된 탭정보로 todo목록을 띄운다.");
-            } else {
-                NSLog(@"기본 탭정보로 todo목록을 띄운다.");
-            }
+        User* user = [self getUser];
+        
+        if (user) {
+            viewController = [[TabBarViewController alloc] initWithTabOrder:user.tabOrder];
         } else {
             NSLog(@"사용자 정보가 없으므로 로그인 창을 띄운다.");
+            viewController = [LoginViewController new];
         }
+        
+        [user release];
     }
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:viewController];
+    [viewController release];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -95,6 +96,29 @@
     [pool drain];
 }
 
+- (User *)getUser
+{
+    User* user = nil;
+    
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    UserManager* userManager = [UserManager new];
+    
+    NSArray* users = [userManager getUsers];
+    
+    if ([users count]) {
+        user = [[users objectAtIndex:0] retain];
+        NSLog(@"user retainCount : %i", [user retainCount]);
+    }
+    
+    [userManager release];
+    
+    [pool drain];
+    
+    return user;
+}
+
+#pragma mark - 나중에 삭제해야함
 - (BOOL)hasUser
 {
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
@@ -105,7 +129,7 @@
     int count = [users count];
     
     [userManager deleteUsers];
-//    [userManager insertUserForId:@"cspark328" withPassword:@"123qwe"];
+    [userManager insertUserForId:@"cspark328" withPassword:@"123qwe"];
     
     [userManager release];
     
@@ -131,29 +155,6 @@
     [todoManager release];
     
     [pool drain];
-}
-
-- (NSArray *)getTabOrder
-{
-    NSArray* tabOrder = nil;
-    
-    NSAutoreleasePool* pool = [NSAutoreleasePool new];
-    
-    UserManager* userManager = [UserManager new];
-    
-    NSArray* users = [userManager getUsers];
-    
-    if ([users count]) {
-        for (User* user in users) {
-            tabOrder = user.tabOrder;
-        }
-    }
-    
-    [userManager release];
-    
-    [pool drain];
-    
-    return tabOrder;
 }
 
 @end
