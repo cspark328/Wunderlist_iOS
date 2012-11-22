@@ -9,6 +9,9 @@
 #import "ListsTableViewController.h"
 #import "ListTableViewController.h"
 #import "ListsTableViewCell.h"
+#import "SpinnerView.h"
+#import "ToDoManager.h"
+#import "ToDo.h"
 
 @implementation ListsTableViewController
 
@@ -26,6 +29,7 @@
         
         [self.navigationItem setRightBarButtonItem:self.editBarButtonItem animated:YES];
         
+        _spinnerView = [SpinnerView new];
         _listsDatas = [[NSArray alloc] initWithObjects:@"받은 편지함", @"개인", @"회사", nil];
         
         [pool drain];
@@ -33,9 +37,17 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_spinnerView show];
+    [self performSelectorInBackground:@selector(getToDos) withObject:nil];
+}
+
 - (void)dealloc
 {
     [_listsDatas release];
+    [_spinnerView release];
     
     [super dealloc];
 }
@@ -101,6 +113,30 @@
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:okButtonTitle otherButtonTitles:cancelButtonTitle, nil];
     [alertView show];
     [alertView release];
+}
+
+#pragma mark - data load
+
+- (void)getToDos
+{
+//    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+//    
+//    ToDoManager* todoManager = [ToDoManager new];
+//    
+//    NSArray* todos = [todoManager getToDos];
+//    
+//    if ([todos count]) {
+//        for (ToDo* todo in todos) {
+//            NSLog(@"isStarred : %@, name : %@", todo.isStarred == [NSNumber numberWithInt:1] ? @"YES" : @"NO", todo.name);
+//        }
+//    }
+//    
+//    [todoManager release];
+//    
+//    [pool drain];
+    
+    [NSThread sleepForTimeInterval:2];
+    [_spinnerView dismissWithClickedButtonIndex:0 animated:NO];
 }
 
 @end

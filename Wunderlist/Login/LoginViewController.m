@@ -9,7 +9,6 @@
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
 #import "SpinnerView.h"
-#import "UserManager.h"
 
 @implementation LoginViewController
 
@@ -39,33 +38,17 @@
         [_laterButton addTarget:self action:@selector(didClickLaterButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_laterButton];
         
-        _userManager = [UserManager new];
-//        NSLog(@"login %@", [_userManager isLater]);
-        
         [pool drain];
     }
     return self;
 }
-
-- (void)dealloc
-{
-    [_userManager release];
-    
-    [super dealloc];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [_userManager getUsers];
-}
-
 
 #pragma mark - Alert view delegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        TabBarViewController* tabBarController = [TabBarViewController new];
+        TabBarViewController* tabBarController = [[TabBarViewController alloc] initWithTabOrder:nil];
         [self presentViewController:tabBarController animated:NO completion:nil];
         [tabBarController release];
         
@@ -83,10 +66,6 @@
 - (void)didClickLoginButton:(id)sender
 {
     NSLog(@"didClickLoginButton");
-    
-    SpinnerView* spinnerView = [SpinnerView new];
-    [spinnerView show];
-    [spinnerView release];
 }
 
 - (void)didClickJoinButton:(id)sender

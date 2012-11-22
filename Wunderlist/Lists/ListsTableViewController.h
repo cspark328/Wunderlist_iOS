@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
 
+@class SpinnerView;
+
 @interface ListsTableViewController : BaseTableViewController<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property(nonatomic, retain) NSArray* listsDatas;
+@property(nonatomic, retain) SpinnerView* spinnerView;
 
 @end

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "ToDoManager.h"
 #import "UserManager.h"
-#import "ToDo.h"
 #import "User.h"
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
@@ -136,25 +135,6 @@
     [pool drain];
     
     return count;
-}
-
-- (void)getToDos
-{
-    NSAutoreleasePool* pool = [NSAutoreleasePool new];
-    
-    ToDoManager* todoManager = [ToDoManager new];
-    
-    NSArray* todos = [todoManager getToDos];
-    
-    if ([todos count]) {
-        for (ToDo* todo in todos) {
-            NSLog(@"isStarred : %@, name : %@", todo.isStarred == [NSNumber numberWithInt:1] ? @"YES" : @"NO", todo.name);
-        }
-    }
-    
-    [todoManager release];
-    
-    [pool drain];
 }
 
 @end
