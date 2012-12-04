@@ -14,11 +14,13 @@
 
 @implementation TabBarViewController
 
-- (id)initWithTabOrder:(NSArray *)tabOrder
+- (id)init
 {
     self = [super init];
     if (self) {
         NSAutoreleasePool* pool = [NSAutoreleasePool new];
+        
+        [self setDelegate:self];
         
         ListsTableViewController* listsTableViewController = [ListsTableViewController new];
         BaseNavigationController* listsNavigationController = [[BaseNavigationController alloc] initWithRootViewController:listsTableViewController];
@@ -96,13 +98,25 @@
         [settingsNavigationController.tabBarItem setImage:[UIImage imageNamed:@""]];
         [settingsNavigationController.tabBarItem setTitle:@"설정"];
         
-        if (tabOrder == NULL) {
-            NSLog(@"탭 순서가 없으므로 기본 순서로 로딩한다.");
-        } else {
-            NSLog(@"저장된 탭 순서로 로딩한다.");
-        }
-        
         self.viewControllers = [NSArray arrayWithObjects:listsNavigationController, starredNavigationController, todayNavigationController, overdueNavigationController, allTableNavigationController, doneNavigationController, tomorrowNavigationController, next7DaysNavigationController, laterNavigationController, noDueDateNavigationController, settingsNavigationController, nil];
+        
+        _tabOrder = [self getTabOrder];
+        
+        if (_tabOrder != NULL && [_tabOrder count] > 0) {
+            NSLog(@"저장된 탭 순서로 로딩한다. _tabOrder count : %d", [_tabOrder count]);
+            NSMutableArray * tabOrder = [NSMutableArray arrayWithCapacity:[_tabOrder count]];
+            
+            for (int i = 0; i < [_tabOrder count]; i++) {
+                for (UIViewController* viewController in self.viewControllers) {
+                    if ([viewController.tabBarItem.title isEqualToString:[_tabOrder objectAtIndex:i]]) {
+                        [tabOrder addObject:viewController];
+                        break;
+                    }
+                }
+            }
+            
+            self.viewControllers = tabOrder;
+        }
         
         [self.moreNavigationController.navigationBar setBarStyle:UIBarStyleBlack];
         
@@ -121,6 +135,46 @@
         [pool drain];
     }
     return self;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+{
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    NSMutableArray * tabOrder = [NSMutableArray arrayWithCapacity:[viewControllers count]];
+    
+    for (UIViewController* viewController in viewControllers) {
+        [tabOrder addObject:viewController.tabBarItem.title];
+    }
+    
+    [self setTabOrder:tabOrder];
+    
+    [pool drain];
+}
+
+- (NSArray *)getTabOrder
+{
+    NSArray * tabOrder = nil;
+    
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    tabOrder = [userDefaults objectForKey:@"tabOrder"];
+    
+    [pool drain];
+    
+    return tabOrder;
+}
+
+
+- (void)setTabOrder:(NSArray *)tabOrder
+{
+    NSAutoreleasePool* pool = [NSAutoreleasePool new];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:tabOrder forKey:@"tabOrder"];
+    
+    [pool drain];
 }
 
 @end

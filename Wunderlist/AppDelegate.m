@@ -37,7 +37,7 @@
         User* user = [self getUser];
         
         if (user) {
-            viewController = [[TabBarViewController alloc] initWithTabOrder:user.tabOrder];
+            viewController = [TabBarViewController new];
         } else {
             NSLog(@"사용자 정보가 없으므로 로그인 창을 띄운다.");
             viewController = [LoginViewController new];

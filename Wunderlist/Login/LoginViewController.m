@@ -48,7 +48,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        TabBarViewController* tabBarController = [[TabBarViewController alloc] initWithTabOrder:nil];
+        TabBarViewController* tabBarController = [TabBarViewController new];
         [self presentViewController:tabBarController animated:NO completion:nil];
         [tabBarController release];
         

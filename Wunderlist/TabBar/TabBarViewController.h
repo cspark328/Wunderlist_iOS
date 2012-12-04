@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBarViewController : UITabBarController
+@interface TabBarViewController : UITabBarController<UITabBarControllerDelegate>
 
-- (id)initWithTabOrder:(NSArray *)tabOrder;
+@property(nonatomic, retain) NSArray* tabOrder;
 
 @end
