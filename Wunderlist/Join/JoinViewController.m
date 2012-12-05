@@ -6,11 +6,11 @@
 //  Copyright (c) 2012년 Chan Soon Park. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "LoginTableViewCell.h"
+#import "JoinViewController.h"
+#import "JoinTableViewCell.h"
 #import "BaseNavigationController.h"
 
-@implementation LoginViewController
+@implementation JoinViewController
 
 - (id)init
 {
@@ -18,7 +18,7 @@
     if (self) {
         NSAutoreleasePool* pool = [NSAutoreleasePool new];
         
-        [self.navigationItem setTitle:@"로그인"];
+        [self.navigationItem setTitle:@"등록"];
         
         self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         
@@ -48,9 +48,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)
-        return 2;
+        return 3;
     else if (section == 1)
-        return 2;
+        return 1;
     
     return 0;
 }
@@ -61,26 +61,22 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    LoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    JoinTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         if (section == 0) {
-            cell = [[[LoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+            cell = [[[JoinTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
             if (row == 0) {
                 [cell.textLabel setText:@"이메일"];
                 [cell.detailTextLabel setText:@"노트 없음"];
             } else if (row == 1) {
                 [cell.textLabel setText:@"비밀번호"];
                 [cell.detailTextLabel setText:@"날짜 없음"];
+            } else if (row == 2) {
+                [cell.textLabel setText:@"소식지 받기"];
+                [cell.detailTextLabel setText:@"알림 없음"];
             }
         } else if (section == 1) {
-            cell = [[[LoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-            if (row == 0) {
-                [cell.textLabel setText:@"로그인"];
-                [cell.detailTextLabel setText:@"노트 없음"];
-            } else if (row == 1) {
-                [cell.textLabel setText:@"비밀번호 잃어버림?"];
-                [cell.detailTextLabel setText:@"날짜 없음"];
-            }
+            cell = [[[JoinTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         }
     }
     

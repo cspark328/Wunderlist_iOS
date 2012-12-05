@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UITableViewController
+@interface JoinViewController : UITableViewController
 
 @property(nonatomic, retain) UIBarButtonItem* commandButtonItem;
 

@@ -27,6 +27,10 @@
 		C3177061163687EC006A0F8B /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3177060163687EC006A0F8B /* UserManager.m */; };
 		C33261AD164FF3C100A718C3 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C33261AC164FF3C100A718C3 /* ToDo.m */; };
 		C375852816612FEA0010CF02 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C375852716612FEA0010CF02 /* User.m */; };
+		C38E618B166F927B006651FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E618A166F927B006651FC /* MainViewController.m */; };
+		C38E618F166F93D3006651FC /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E618E166F93D3006651FC /* JoinViewController.m */; };
+		C38E6192166F9A01006651FC /* JoinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E6191166F9A01006651FC /* JoinTableViewCell.m */; };
+		C38E6195166F9C73006651FC /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E6194166F9C73006651FC /* LoginTableViewCell.m */; };
 		C3A55FD5165D3EFC00C58905 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FBE165D3EFC00C58905 /* DetailTableViewCell.m */; };
 		C3A55FD6165D3EFC00C58905 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC0165D3EFC00C58905 /* DetailTableViewController.m */; };
 		C3A55FD7165D3EFC00C58905 /* DueDateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55FC3165D3EFC00C58905 /* DueDateTableViewController.m */; };
@@ -84,6 +88,14 @@
 		C33261AC164FF3C100A718C3 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = Model/ToDo/ToDo.m; sourceTree = "<group>"; };
 		C375852616612FEA0010CF02 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User/User.h; sourceTree = "<group>"; };
 		C375852716612FEA0010CF02 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User/User.m; sourceTree = "<group>"; };
+		C38E6189166F927B006651FC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
+		C38E618A166F927B006651FC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
+		C38E618D166F93D3006651FC /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinViewController.h; path = Join/JoinViewController.h; sourceTree = "<group>"; };
+		C38E618E166F93D3006651FC /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinViewController.m; path = Join/JoinViewController.m; sourceTree = "<group>"; };
+		C38E6190166F9A01006651FC /* JoinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinTableViewCell.h; path = Join/JoinTableViewCell.h; sourceTree = "<group>"; };
+		C38E6191166F9A01006651FC /* JoinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinTableViewCell.m; path = Join/JoinTableViewCell.m; sourceTree = "<group>"; };
+		C38E6193166F9C73006651FC /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginTableViewCell.h; path = Login/LoginTableViewCell.h; sourceTree = "<group>"; };
+		C38E6194166F9C73006651FC /* LoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginTableViewCell.m; path = Login/LoginTableViewCell.m; sourceTree = "<group>"; };
 		C3A55FBD165D3EFC00C58905 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		C3A55FBE165D3EFC00C58905 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		C3A55FBF165D3EFC00C58905 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
@@ -175,6 +187,8 @@
 		C317701616366C76006A0F8B /* Wunderlist */ = {
 			isa = PBXGroup;
 			children = (
+				C38E618C166F93A0006651FC /* Join */,
+				C38E6187166F9241006651FC /* Main */,
 				C3A55FBC165D3EFC00C58905 /* Detail */,
 				C3A55FC1165D3EFC00C58905 /* DueDate */,
 				C3A55FC4165D3EFC00C58905 /* EditText */,
@@ -255,6 +269,26 @@
 				C3177060163687EC006A0F8B /* UserManager.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		C38E6187166F9241006651FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C38E6189166F927B006651FC /* MainViewController.h */,
+				C38E618A166F927B006651FC /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		C38E618C166F93A0006651FC /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				C38E618D166F93D3006651FC /* JoinViewController.h */,
+				C38E618E166F93D3006651FC /* JoinViewController.m */,
+				C38E6190166F9A01006651FC /* JoinTableViewCell.h */,
+				C38E6191166F9A01006651FC /* JoinTableViewCell.m */,
+			);
+			name = Join;
 			sourceTree = "<group>";
 		};
 		C3A55FBC165D3EFC00C58905 /* Detail */ = {
@@ -340,6 +374,8 @@
 			children = (
 				C3CF40141653E4E400D998B8 /* LoginViewController.h */,
 				C3CF40151653E4E400D998B8 /* LoginViewController.m */,
+				C38E6193166F9C73006651FC /* LoginTableViewCell.h */,
+				C38E6194166F9C73006651FC /* LoginTableViewCell.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -497,6 +533,10 @@
 				C3A55FDC165D3EFC00C58905 /* ListsTableViewController.m in Sources */,
 				C3A55FDD165D3EFC00C58905 /* SettingsTableViewController.m in Sources */,
 				C375852816612FEA0010CF02 /* User.m in Sources */,
+				C38E618B166F927B006651FC /* MainViewController.m in Sources */,
+				C38E618F166F93D3006651FC /* JoinViewController.m in Sources */,
+				C38E6192166F9A01006651FC /* JoinTableViewCell.m in Sources */,
+				C38E6195166F9C73006651FC /* LoginTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

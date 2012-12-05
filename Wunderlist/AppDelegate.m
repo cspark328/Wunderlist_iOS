@@ -10,7 +10,7 @@
 #import "ToDoManager.h"
 #import "UserManager.h"
 #import "User.h"
-#import "LoginViewController.h"
+#import "MainViewController.h"
 #import "TabBarViewController.h"
 
 @implementation AppDelegate
@@ -32,7 +32,7 @@
         [self initToDo];
         
         NSLog(@"최초 실행이므로 로그인 창을 띄운다.");
-        viewController = [LoginViewController new];
+        viewController = [MainViewController new];
     } else {
         User* user = [self getUser];
         
@@ -40,7 +40,7 @@
             viewController = [TabBarViewController new];
         } else {
             NSLog(@"사용자 정보가 없으므로 로그인 창을 띄운다.");
-            viewController = [LoginViewController new];
+            viewController = [MainViewController new];
         }
         
         [user release];
