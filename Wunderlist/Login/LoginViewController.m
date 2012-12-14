@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "LoginTableViewCell.h"
 #import "BaseNavigationController.h"
 
 @implementation LoginViewController
@@ -61,25 +60,44 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    LoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [cell setSelectionStyle:UITableViewCellEditingStyleNone];
+        
         if (section == 0) {
-            cell = [[[LoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
             if (row == 0) {
                 [cell.textLabel setText:@"이메일"];
-                [cell.detailTextLabel setText:@"노트 없음"];
+                
+                UITextField* textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 180, 30)];
+                [textField setPlaceholder:@"필수"];
+                [textField setKeyboardType:UIKeyboardTypeEmailAddress];
+                [textField setReturnKeyType:UIReturnKeyNext];
+                [textField setBackgroundColor:[UIColor clearColor]];
+                [textField setTextAlignment:NSTextAlignmentLeft];
+                
+                [cell addSubview:textField];
+                [textField release];
+                
             } else if (row == 1) {
                 [cell.textLabel setText:@"비밀번호"];
-                [cell.detailTextLabel setText:@"날짜 없음"];
+                
+                UITextField* textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 180, 30)];
+                [textField setPlaceholder:@"필수"];
+                [textField setBackgroundColor:[UIColor clearColor]];
+                [textField setTextAlignment:NSTextAlignmentLeft];
+                [textField setSecureTextEntry:YES];
+                
+                [cell addSubview:textField];
+                [textField release];
             }
         } else if (section == 1) {
-            cell = [[[LoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
             if (row == 0) {
                 [cell.textLabel setText:@"로그인"];
-                [cell.detailTextLabel setText:@"노트 없음"];
+                [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
             } else if (row == 1) {
                 [cell.textLabel setText:@"비밀번호 잃어버림?"];
-                [cell.detailTextLabel setText:@"날짜 없음"];
+                [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
             }
         }
     }

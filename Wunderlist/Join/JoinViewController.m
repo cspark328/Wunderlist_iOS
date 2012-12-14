@@ -7,7 +7,6 @@
 //
 
 #import "JoinViewController.h"
-#import "JoinTableViewCell.h"
 #import "BaseNavigationController.h"
 
 @implementation JoinViewController
@@ -61,22 +60,46 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    JoinTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [cell setSelectionStyle:UITableViewCellEditingStyleNone];
+        
         if (section == 0) {
-            cell = [[[JoinTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
             if (row == 0) {
                 [cell.textLabel setText:@"이메일"];
-                [cell.detailTextLabel setText:@"노트 없음"];
+                
+                UITextField* textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 180, 30)];
+                [textField setPlaceholder:@"필수"];
+                [textField setKeyboardType:UIKeyboardTypeEmailAddress];
+                [textField setReturnKeyType:UIReturnKeyNext];
+                [textField setBackgroundColor:[UIColor clearColor]];
+                [textField setTextAlignment:NSTextAlignmentLeft];
+                
+                [cell addSubview:textField];
+                [textField release];
             } else if (row == 1) {
                 [cell.textLabel setText:@"비밀번호"];
-                [cell.detailTextLabel setText:@"날짜 없음"];
+                
+                UITextField* textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 180, 30)];
+                [textField setPlaceholder:@"필수"];
+                [textField setBackgroundColor:[UIColor clearColor]];
+                [textField setTextAlignment:NSTextAlignmentLeft];
+                [textField setSecureTextEntry:YES];
+                
+                [cell addSubview:textField];
+                [textField release];
             } else if (row == 2) {
                 [cell.textLabel setText:@"소식지 받기"];
-                [cell.detailTextLabel setText:@"알림 없음"];
+                
+                UISwitch* getNewsletterSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+                [getNewsletterSwitch addTarget:self action:@selector(didClickGetNewsletterSwitch:) forControlEvents:UIControlEventTouchUpInside];
+                [cell setAccessoryView:getNewsletterSwitch];
+                [getNewsletterSwitch release];
             }
         } else if (section == 1) {
-            cell = [[[JoinTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+            [cell.textLabel setText:@"지금 등록하기"];
+            [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
         }
     }
     
@@ -108,6 +131,12 @@
 - (void)didClickCommandButton:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)didClickGetNewsletterSwitch:(id)sender
+{
+    NSLog(@"didClickGetNewsletterSwitch");
 }
 
 @end
